@@ -1,0 +1,1 @@
+npm i firebase @angular/fire --save               -->  instalacion de dos dependencias, firebase y angular fire2, sirve para hacer la conexion a firebase

@@ -2,7 +2,7 @@
   <ion-split-pane>
     <ion-menu type="overlay">
       <ion-header>
-        <ion-toolbar>
+        <ion-toolbar color="dark">
           <ion-title>Menu</ion-title>
         </ion-toolbar>
       </ion-header>
@@ -17,6 +17,42 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
+
+        <ion-list>
+            <ion-menu-toggle  *ngIf="isLogged" >
+                <ion-item>
+                    <ion-icon slot="start"  name="folder"></ion-icon>
+                    <ion-label  routerLink="/alumno">
+                      Datos de Alumnos
+                     </ion-label>
+                </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+
+        <ion-list>
+          <ion-menu-toggle  *ngIf="!isLogged" >
+              <ion-item>
+                  <ion-icon slot="start"  name="person"></ion-icon>
+                  <ion-label routerLink="/login">
+                    Login
+                   </ion-label>
+              </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-list>
+            <ion-menu-toggle  *ngIf="isLogged" >
+                <ion-item>
+                    <ion-icon slot="start"  name="log-out"></ion-icon>
+                    <ion-label (click)="onLogout()">
+                      Salir
+                     </ion-label>
+                </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+
+
+
       </ion-content>
     </ion-menu>
     <ion-router-outlet main></ion-router-outlet>
