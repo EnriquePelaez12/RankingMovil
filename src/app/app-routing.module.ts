@@ -11,10 +11,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
-  {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+  { path: 'login', loadChildren: './componentes/login/login.module#LoginPageModule' },
+  { path: 'list-peleadores', loadChildren: './componentes/list-peleadores/list-peleadores.module#ListPeleadoresPageModule' },
+  { path: 'detail-peleadores', loadChildren: './componentes/detail-peleadores/detail-peleadores.module#DetailPeleadoresPageModule' },
+  { path: 'alumno', loadChildren: './componentes/alumno/alumno.module#AlumnoPageModule' }
 ];
 
 @NgModule({
