@@ -13,9 +13,12 @@ const routes: Routes = [
   },
   { path: 'login', loadChildren: './componentes/login/login.module#LoginPageModule' },
   { path: 'alumno', loadChildren: './componentes/alumno/alumno.module#AlumnoPageModule' },
+  { path: 'detail-alumno/:id', loadChildren: './componentes/detail-alumno/detail-alumno.module#DetailAlumnoPageModule' },
+  { path: 'detail-alumno', loadChildren: './componentes/detail-alumno/detail-alumno.module#DetailAlumnoPageModule' },
   { path: 'list-peleadores', loadChildren: './componentes/list-peleadores/list-peleadores.module#ListPeleadoresPageModule' },
-  { path: 'detail-peleadores', loadChildren: './componentes/detail-peleadores/detail-peleadores.module#DetailPeleadoresPageModule' },
-  
+  { path: 'detail/:id', loadChildren: './componentes/detail-peleadores/detail-peleadores.module#DetailPeleadoresPageModule' },
+  { path: 'detail', loadChildren: './componentes/detail-peleadores/detail-peleadores.module#DetailPeleadoresPageModule' },
+ 
 ];
 
 @NgModule({
