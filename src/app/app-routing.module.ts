@@ -18,6 +18,8 @@ const routes: Routes = [
   { path: 'list-peleadores', loadChildren: './componentes/list-peleadores/list-peleadores.module#ListPeleadoresPageModule' },
   { path: 'detail/:id', loadChildren: './componentes/detail-peleadores/detail-peleadores.module#DetailPeleadoresPageModule' },
   { path: 'detail', loadChildren: './componentes/detail-peleadores/detail-peleadores.module#DetailPeleadoresPageModule' },
+  { path: 'modal-alumno/:id', loadChildren: './componentes/modal-alumno/modal-alumno.module#ModalAlumnoPageModule' },
+  { path: 'modal-alumno', loadChildren: './componentes/modal-alumno/modal-alumno.module#ModalAlumnoPageModule' },
  
 ];
 

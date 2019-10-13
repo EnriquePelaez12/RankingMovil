@@ -1,0 +1,124 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+    <ion-title>Editar Alumnos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list lines="full">
+
+      <ion-label>Matricula:</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Matricula" [(ngModel)]="alumno.matricula"></ion-input>
+      </ion-item>
+
+      <ion-label>Nombre:</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Nombre" [(ngModel)]="alumno.nombreC"></ion-input>
+      </ion-item>
+
+      <!-- <ion-label>Fecha de Nacimiento:</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Fecha de Nacimiento" [(ngModel)]="alumno."></ion-input>
+      </ion-item>  -->
+
+      <ion-label>Dirección</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Dirección" [(ngModel)]="alumno.direccion"></ion-input>
+      </ion-item>
+
+      <ion-label>Sexo</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Sexo" [(ngModel)]="alumno.sexo"></ion-input>
+      </ion-item>
+
+      <ion-label>Victorias</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Victorias" [(ngModel)]="alumno.gano"></ion-input>
+      </ion-item>
+
+      <ion-label>Derotas</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Derotas" [(ngModel)]="alumno.perdio"></ion-input>
+      </ion-item>
+
+      <ion-label>Empate</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Empate" [(ngModel)]="alumno.empate"></ion-input>
+      </ion-item>
+
+      <ion-label>Cel</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="" [(ngModel)]="alumno.cel"></ion-input>
+      </ion-item>
+
+      <ion-label>Apodo</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Apodo" [(ngModel)]="alumno.apodo"></ion-input>
+      </ion-item>
+
+      <ion-label>Grado</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Grado" [(ngModel)]="alumno.grado"></ion-input>
+      </ion-item>
+
+      <ion-label>Peso</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Peso" [(ngModel)]="alumno.peso"></ion-input>
+      </ion-item>
+     
+      <ion-label>Problemas de Salud</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Problemas de Salud" [(ngModel)]="alumno.salud"></ion-input>
+      </ion-item>
+      <h1>Datos del Tutor</h1>
+
+      <ion-label>Nombre</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Nombre" [(ngModel)]="alumno.tutor"></ion-input>
+      </ion-item>
+
+      <ion-label>Dirección</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Dirección" [(ngModel)]="alumno.direccionTutor"></ion-input>
+      </ion-item>
+
+      <ion-label>Telefono</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Telefono" [(ngModel)]="alumno.telefonoTutor"></ion-input>
+      </ion-item>
+      <h1>Datos del Profesor</h1>
+
+      <ion-label>Nombre</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Nombre" [(ngModel)]="alumno.nombreProf"></ion-input>
+      </ion-item>
+
+      <ion-label>Edad</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Edad" [(ngModel)]="alumno.edadProf"></ion-input>
+      </ion-item>
+
+      <ion-label>Sexo</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Sexo" [(ngModel)]="alumno.sexoProf"></ion-input>
+      </ion-item>
+
+      <ion-label>Direccion</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Direccion" [(ngModel)]="alumno.direccionProf"></ion-input>
+      </ion-item>
+
+
+
+
+
+    </ion-list>
+     <ion-button (click)="saveAlumno()" [routerLink]="['/detail-alumno', alumno.id]" color="primary" >
+      <ion-label>Guardar</ion-label>
+  </ion-button> 
+  
+  </ion-content>

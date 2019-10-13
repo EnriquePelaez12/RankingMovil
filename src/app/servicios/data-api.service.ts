@@ -51,14 +51,14 @@ export class DataApiService {
   }
 
   //metodo para añadir libro
-  addAlumno(alumno: AlumnoInterface): void{
-    this.alumnosCollection.add(alumno);
+  addAlumno(alumno: AlumnoInterface){
+    return this.alumnosCollection.add(alumno);
   }
    //metodo para actualizar
-  updateAlumno(alumno: AlumnoInterface): void{
-    let idAlumno = alumno.id;
-    this.alumnoDoc = this.afs.doc<AlumnoInterface>(`alumnos/${idAlumno}`);
-    this.alumnoDoc.update(alumno);
+  updateAlumno(alumno: AlumnoInterface, id: string) {
+    return this.alumnosCollection.doc(id).update(alumno);
+    // return  this.alumnoDoc = this.afs.doc<AlumnoInterface>(`alumnos/${idAlumno}`);
+    //  this.alumnoDoc.update(alumno);
   }
 
 

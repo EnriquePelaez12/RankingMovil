@@ -24,6 +24,8 @@ export class DetailAlumnoPage implements OnInit {
     this.getDetails(idAlumno);
   }
 
+  
+
   //metodo para saber el id
   getDetails(idAlumno: string): void {
     this.dataApi.getOneAlumno(idAlumno).subscribe(alumno => {
@@ -31,7 +33,7 @@ export class DetailAlumnoPage implements OnInit {
     });
   }
 
-//metodo para eliminar alumno
+//metodo para eliminar alumno    
   onDeleteAlumno(idAlumno: string): void{
     const confirmacion = confirm('¿Estas seguro de Eliminar?')
     if(confirmacion){
