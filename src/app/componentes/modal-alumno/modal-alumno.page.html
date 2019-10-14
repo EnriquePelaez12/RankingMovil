@@ -14,6 +14,9 @@
       <ion-item *ngIf="alumno">
         <ion-input required type="text" placeholder="Matricula" [(ngModel)]="alumno.matricula"></ion-input>
       </ion-item>
+      <!-- <ion-item>
+        <ion-input type="text" name="userUid" [value]="userUid" ></ion-input>
+      </ion-item> -->
 
       <ion-label>Nombre:</ion-label>
       <ion-item *ngIf="alumno">
@@ -117,8 +120,9 @@
 
 
     </ion-list>
-     <ion-button (click)="saveAlumno()" [routerLink]="['/detail-alumno', alumno.id]" color="primary" >
+     <ion-button (click)="saveAlumno()"  color="primary" >
       <ion-label>Guardar</ion-label>
   </ion-button> 
+  <!-- [routerLink]="['/detail-alumno', alumno.id]" -->
   
   </ion-content>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { AlumnoInterface } from '../../models/alumno';
 import { DataApiService } from '../../servicios/data-api.service';
+import { NavController, LoadingController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-detail-alumno',
@@ -12,7 +13,8 @@ export class DetailAlumnoPage implements OnInit {
 
   constructor(
     private dataApi: DataApiService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private nav: NavController
   ) { }
 
   //propiedad
@@ -30,9 +32,9 @@ export class DetailAlumnoPage implements OnInit {
   getDetails(idAlumno: string): void {
     this.dataApi.getOneAlumno(idAlumno).subscribe(alumno => {
       this.alumno = alumno;
+     // this.nav.navigateForward('/modal-alumno, alumno.id'); //Es la ruta a la que quieres que te lleve despues de hacer las operaciones 
     });
   }
-
 //metodo para eliminar alumno    
   onDeleteAlumno(idAlumno: string): void{
     const confirmacion = confirm('¿Estas seguro de Eliminar?')

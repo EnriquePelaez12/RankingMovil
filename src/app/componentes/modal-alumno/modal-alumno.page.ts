@@ -1,4 +1,4 @@
-import { Component, OnInit,  ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit,  ViewChild, ElementRef, Input } from '@angular/core';
 import { DataApiService } from '../../servicios/data-api.service';
 import { AlumnoInterface } from '../../models/alumno';
 // import { NgForm } from '@angular/forms';
@@ -28,6 +28,7 @@ export class ModalAlumnoPage implements OnInit {
     private loadingController: LoadingController,
     private alertCtrl: AlertController
   ) { }
+  @Input() userUid: string;
 
   //propiedad
   // public alumno: AlumnoInterface= {};
@@ -61,13 +62,14 @@ export class ModalAlumnoPage implements OnInit {
           //update
           this.dataApi.updateAlumno(this.alumno, this.idAlumno).then(() => {
             loading.dismiss();
-            // this.nav.navigateForward('/detail-alumno, alumno.id');
+            this.nav.navigateForward('/detail-alumno, alumno.id'); //Es la ruta a la que quieres que te lleve despues de hacer las operaciones 
           });
         }else{
           //Add new
-          this.dataApi.addAlumno(this.idAlumno).then(() => {
+          // this.alumno.userUid = this.userUid;
+          this.dataApi.addAlumno(this.alumno).then(() => {
             loading.dismiss();
-            // this.nav.navigateForward('/detail-alumno, alumno.id');
+            this.nav.navigateForward('/alumno');
           });
         }
       }
