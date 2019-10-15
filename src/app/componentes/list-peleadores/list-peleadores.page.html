@@ -7,22 +7,22 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-<h1>Hola detalles Peleadores</h1>
 
-<ion-grid>
-    <ion-row>
-      <ion-col>
-          hola hola hola
-      </ion-col>
-      <ion-col>
-        ion-col ion-col ion-col   ion-col ion-col ion-col   ion-col ion-col ion-col
-      </ion-col>
+
+<ion-content class="ion-padding">
+    <ion-list>
+      <ion-item-sliding *ngFor="let alumno of alumnos">
+        <ion-item lines="insert" button [routerLink]="['/detail-alumno', alumno.id]">
+          <ion-label>
+           {{alumno.nombreC}}
+          </ion-label>
+        </ion-item>
+      </ion-item-sliding>
+    </ion-list>
+<!--     
+    <ion-button color="primary"  [routerLink]="['/modal-alumno']">
+      <ion-label>Nuevo</ion-label>
+    </ion-button> -->
     
-    </ion-row>
-  
- 
-  
+    </ion-content>
     
-  </ion-grid>
-</ion-content>

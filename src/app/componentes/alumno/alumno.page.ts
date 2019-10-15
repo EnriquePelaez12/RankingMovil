@@ -10,9 +10,7 @@ import { DataApiService } from '../../servicios/data-api.service';
 export class AlumnoPage implements OnInit {
 
   constructor(private dataApi: DataApiService) { }
-  // public alumnos= [];
-   //public alumno= '';
-   //propiedades
+ 
   private alumnos: AlumnoInterface[];
  
  
@@ -27,19 +25,7 @@ export class AlumnoPage implements OnInit {
      });
    }
  
- 
-//  onDeleteAlumno(idAlumno: string): void{
-//    const confirmacion = confirm('¿Estas seguro de Eliminar?')
-//    if(confirmacion){
-//    this.dataApi.deleteAlumno(idAlumno);
-//    }
-//  }
- 
-//  onPreUpdateAlumno(alumno: AlumnoInterface): void{
-//    console.log('ALUMNOOO', alumno)
-//    this.dataApi.selectedAlumno = Object.assign({}, alumno);
- 
-//  }
+
  
  }
  

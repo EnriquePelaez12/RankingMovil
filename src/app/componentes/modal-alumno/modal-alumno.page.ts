@@ -30,8 +30,6 @@ export class ModalAlumnoPage implements OnInit {
   ) { }
   @Input() userUid: string;
 
-  //propiedad
-  // public alumno: AlumnoInterface= {};
 
 
   ngOnInit() {
@@ -62,46 +60,17 @@ export class ModalAlumnoPage implements OnInit {
           //update
           this.dataApi.updateAlumno(this.alumno, this.idAlumno).then(() => {
             loading.dismiss();
-            this.nav.navigateForward('/detail-alumno, alumno.id'); //Es la ruta a la que quieres que te lleve despues de hacer las operaciones 
+           this.nav.navigateForward('alumno'); //Es la ruta a la que quieres que te lleve despues de hacer las operaciones 
           });
         }else{
           //Add new
-          // this.alumno.userUid = this.userUid;
+         // this.alumno.userUid = this.userUid;
           this.dataApi.addAlumno(this.alumno).then(() => {
             loading.dismiss();
-            this.nav.navigateForward('/alumno');
+          this.nav.navigateForward('/alumno');
           });
         }
       }
     }
   
   
-
-    // const idAlumno = this.route.snapshot.params['id'];
-  //   // this.getDetails(idAlumno);
-  //   // this.onSaveAlumno(idAlumno)
-  // }
-
-
-  // onSaveAlumno(alumnForm: NgForm): void{
-  //   // console.log('alumnForm.value.id', alumnForm.value.id)
-  //    if(alumnForm.value.id == null){
-  //    //new 
-  //    this.dataApi.addAlumno(alumnForm.value);
-  //    }else{
-  //    //update  
-  //    this.dataApi.updateAlumno(alumnForm.value);
-  //    }
-  //    alumnForm.resetForm();
-  //   //  this.btnClose.nativeElement.click();
- 
-  //  }
-
-  //   //metodo para saber el id
-  // getDetails(idAlumno: string): void {
-  //   this.dataApi.getOneAlumno(idAlumno).subscribe(alumno => {
-  //     this.alumno = alumno;
-  //   });
-  // }
-
-// }

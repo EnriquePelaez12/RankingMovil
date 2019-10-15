@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content padding>
+    {{isAdmin}}
   <ion-item>
       <img class="img-fluid" src="{{alumno.photoUrl}}">
   </ion-item>
@@ -197,10 +198,21 @@
               </ion-row>
 
         </ion-grid>
-        <ion-button color="primary"  [routerLink]="['/modal-alumno', alumno.id]">
-            <ion-label>Editar</ion-label>
-        </ion-button>
+        <ion-row *ngIf="alumno.userUid == userUid || isAdmin == true">
+                <ion-button color="primary"  [routerLink]="['/modal-alumno', alumno.id]">
+                    <ion-label>Editar</ion-label>
+                </ion-button>
+        </ion-row>
+
+        <ion-row *ngIf="alumno.userUid == userUid || isAdmin == true">
+                <ion-button (click)="onDeleteAlumno(alumno.id)" color="danger" >
+                    <ion-label>Eliminar</ion-label>
+                </ion-button>
+        </ion-row>
+      
 
     </ion-content>
-    <!-- <ion-modal [userUid="userUid"]></ion-modal> -->
+    <!-- <ion-modal [userUid="userUid"]></ion-modal> 
+    *ngIf="alumno.userUid == userUid || isAdmin == true"
+    -->
     
