@@ -36,7 +36,7 @@ export class LoginPage implements OnInit {
 }
 
 onLoginRedirect(){
-  this.router.navigate(['/alumno']);//si esta logueado se manda a esa direccion
+  this.router.navigate(['/home']);//si esta logueado se manda a esa direccion
 
 }
 }

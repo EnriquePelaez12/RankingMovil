@@ -18,12 +18,13 @@ export class AppComponent {
       title: 'Home',
       url: '/home',
       icon: 'home'
-    },
-    {
-      title: 'Peleadores',
-      url: '/list-peleadores',
-      icon: 'list'
     }
+    // ,
+    // {
+    //   title: 'Peleadores',
+    //   url: '/list-peleadores',
+    //   icon: 'list'
+    // }
   ];
 
   constructor(

@@ -19,6 +19,18 @@
         </ion-list>
 
         <ion-list>
+          <ion-menu-toggle  *ngIf="!isLogged" >
+              <ion-item>
+                  <ion-icon slot="start"  name="folder"></ion-icon>
+                  <ion-label  routerLink="/list-peleadores">
+                    Peleadores
+                   </ion-label>
+              </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+
+        <ion-list>
             <ion-menu-toggle  *ngIf="isLogged" >
                 <ion-item>
                     <ion-icon slot="start"  name="folder"></ion-icon>

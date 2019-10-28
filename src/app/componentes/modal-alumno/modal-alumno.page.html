@@ -14,13 +14,24 @@
       <ion-item *ngIf="alumno">
         <ion-input required type="text" placeholder="Matricula" [(ngModel)]="alumno.matricula"></ion-input>
       </ion-item>
-      <!-- <ion-item>
+      <ion-item>
         <ion-input type="text" name="userUid" [value]="userUid" ></ion-input>
-      </ion-item> -->
+      </ion-item>
 
       <ion-label>Nombre:</ion-label>
       <ion-item *ngIf="alumno">
         <ion-input required type="text" placeholder="Nombre" [(ngModel)]="alumno.nombreC"></ion-input>
+      </ion-item>
+
+      <ion-label>Edad:</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Edad" [(ngModel)]="alumno.edad"></ion-input>
+      </ion-item>
+
+      
+      <ion-label>Peleador:</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Peleador" [(ngModel)]="alumno.peleador"></ion-input>
       </ion-item>
 
       <!-- <ion-label>Fecha de Nacimiento:</ion-label>
@@ -38,21 +49,7 @@
         <ion-input required type="text" placeholder="Sexo" [(ngModel)]="alumno.sexo"></ion-input>
       </ion-item>
 
-      <ion-label>Victorias</ion-label>
-      <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Victorias" [(ngModel)]="alumno.gano"></ion-input>
-      </ion-item>
-
-      <ion-label>Derotas</ion-label>
-      <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Derotas" [(ngModel)]="alumno.perdio"></ion-input>
-      </ion-item>
-
-      <ion-label>Empate</ion-label>
-      <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Empate" [(ngModel)]="alumno.empate"></ion-input>
-      </ion-item>
-
+      
       <ion-label>Cel</ion-label>
       <ion-item *ngIf="alumno">
         <ion-input required type="text" placeholder="" [(ngModel)]="alumno.cel"></ion-input>
@@ -77,6 +74,22 @@
       <ion-item *ngIf="alumno">
         <ion-input required type="text" placeholder="Problemas de Salud" [(ngModel)]="alumno.salud"></ion-input>
       </ion-item>
+
+      <ion-label>Victorias</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Victorias" [(ngModel)]="alumno.gano"></ion-input>
+      </ion-item>
+
+      <ion-label>Derotas</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Derotas" [(ngModel)]="alumno.perdio"></ion-input>
+      </ion-item>
+
+      <ion-label>Empate</ion-label>
+      <ion-item *ngIf="alumno">
+        <ion-input required type="text" placeholder="Empate" [(ngModel)]="alumno.empate"></ion-input>
+      </ion-item>
+
       <h1>Datos del Tutor</h1>
 
       <ion-label>Nombre</ion-label>
@@ -116,7 +129,8 @@
       </ion-item>
 
 
-
+ 
+      
 
 
     </ion-list>
