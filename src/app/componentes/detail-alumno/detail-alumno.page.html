@@ -2,218 +2,332 @@
     <ion-toolbar color="dark">
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
-          </ion-buttons>
-    <ion-title>Detalles Alumno</ion-title>
-  </ion-toolbar>
+        </ion-buttons>
+        <ion-title>Detalles Alumno</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-    {{isAdmin}}
-  <ion-item>
-      <img class="img-fluid" src="{{alumno.photoUrl}}">
-  </ion-item>
-    <ion-grid>
-        <ion-row>
-          <ion-col size="3">
-              Matricula:
-          </ion-col>
-          <ion-col>
-              {{alumno.matricula}}
-          </ion-col>
+    <!-- {{isAdmin}} -->
+    <ion-item>
+        <img class="img-fluid" src="{{alumno.photoUrl}}">
+    </ion-item>
+
+    <ion-grid class="table table-striped">
+
+            <ion-row>
+                    <ion-col size="3">
+                        </ion-col>
+                        <ion-col>
+                        </ion-col>
+            </ion-row>
+            <ion-row>
+                    <ion-col size="3">
+                        </ion-col>
+                        <ion-col>
+                        </ion-col>
+            </ion-row>
+            <ion-item color="dark">
+                    <ion-label>
+                            Datos del Alumno
+                    </ion-label>
+                  </ion-item>
+
+        <ion-row class="gris">
+            <ion-col size="3">
+                Matricula:
+            </ion-col>
+            <ion-col>
+                {{alumno.matricula}}
+            </ion-col>
         </ion-row>
 
-        <ion-row>
+        <ion-row class="blanco">
             <ion-col size="3">
                 Nombre:
             </ion-col>
             <ion-col>
                 {{alumno.nombreC}}
             </ion-col>
-          </ion-row>
-
-          <ion-row>
-              <ion-col size="4">
-                  Fecha de Nacimiento:
-              </ion-col>
-              <ion-col>
-                  {{alumno.diaAlumno}}/{{alumno.mesAlumno}}/{{alumno.yearAlumno}}
-              </ion-col>
-            </ion-row>
-
-            <ion-row>
-                <ion-col size="4">
-                    Direccion:
-                </ion-col>
-                <ion-col>
-                    {{alumno.direccion}}
-                </ion-col>
-              </ion-row>
-
-              <ion-row>
-                  <ion-col size="3">
-                      Sexo:
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.sexo}}
-                  </ion-col>
-              </ion-row>
-
-              <ion-row>
-                  <ion-col size="3">
-                      Victoria: 
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.gano}}
-                  </ion-col>
-              </ion-row>
-
-              <ion-row>
-                  <ion-col size="3">
-                      Derota:
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.perdio}}
-                  </ion-col>
-              </ion-row>
-
-              <ion-row>
-                  <ion-col size="3">
-                      Empate:
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.empate}}
-                  </ion-col>
-              </ion-row>
-
-              <ion-row>
-                  <ion-col size="3">
-                      Cel:
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.cel}}
-                  </ion-col>
-              </ion-row>
-
-              <ion-row>
-                  <ion-col size="3">
-                      Apodo:
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.apodo}}
-                  </ion-col>
-              </ion-row>
-                
-              <ion-row>
-                  <ion-col size="3">
-                      Grado:
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.grado}}
-                  </ion-col>
-              </ion-row>
-
-              <ion-row>
-                  <ion-col size="3">
-                      Peso:
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.peso}}
-                  </ion-col>
-              </ion-row>
-
-              <ion-row>
-                  <ion-col size="4">
-                      Problemas de Salud:
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.salud}}
-                  </ion-col>
-              </ion-row>
-
-                <h2> Datos del Tutor</h2>
-
-              <ion-row>
-                  <ion-col size="3">
-                      Nombre:
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.tutor}}
-                  </ion-col>
-              </ion-row>
-
-              <ion-row>
-                  <ion-col size="4">
-                      Dirección:
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.direccionTutor}}
-                  </ion-col>
-              </ion-row>
-
-              <ion-row>
-                  <ion-col size="3">
-                      Telefono:
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.telefonoTutor}}
-                  </ion-col>
-              </ion-row>
-
-              <h4>Datos del Profesor</h4>
-
-              <ion-row>
-                  <ion-col size="3">
-                      Nombre:
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.nombreProf}}
-                  </ion-col>
-              </ion-row>
-
-              <ion-row>
-                  <ion-col size="3">
-                      Edad:
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.edadProf}}
-                  </ion-col>
-              </ion-row>
-
-              <ion-row>
-                  <ion-col size="3">
-                      Sexo:
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.sexoProf}}
-                  </ion-col>
-              </ion-row>
-
-              <ion-row>
-                  <ion-col size="4">
-                      Dirección:
-                  </ion-col>
-                  <ion-col>
-                      {{alumno.direccionProf}}
-                  </ion-col>
-              </ion-row>
-              <ion-row *ngIf="alumno.userUid == iserUid || isAdmin == true; "></ion-row>
-
-        </ion-grid>
-        <ion-row *ngIf="alumno.userUid == userUid || isAdmin == true">
-                <ion-button class="btn-block btn-info"   [routerLink]="['/modal-alumno', alumno.id]">
-                    <ion-label>Editar</ion-label>
-                </ion-button>
         </ion-row>
 
-        <ion-row *ngIf="alumno.userUid == userUid || isAdmin == true">
-                <ion-button (click)="onDeleteAlumno(alumno.id)" color="danger" >
-                    <ion-label>Eliminar</ion-label>
-                </ion-button>
+        <ion-row class="gris">
+            <ion-col size="4">
+                Fecha de Nacimiento:
+            </ion-col>
+            <ion-col>
+                {{alumno.diaAlumno}}/{{alumno.mesAlumno}}/{{alumno.yearAlumno}}
+            </ion-col>
         </ion-row>
-      
 
-    </ion-content>
-    <!-- <ion-modal [userUid="userUid"]></ion-modal> 
+        <ion-row class="blanco">
+            <ion-col size="4">
+                Direccion:
+            </ion-col>
+            <ion-col>
+                {{alumno.direccion}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="gris">
+            <ion-col size="3">
+                Sexo:
+            </ion-col>
+            <ion-col>
+                {{alumno.sexo}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="blanco">
+            <ion-col>
+                Victoria:
+            </ion-col>
+            <ion-col>
+                {{alumno.gano}}
+            </ion-col>
+            <ion-col>
+                Derota:
+            </ion-col>
+            <ion-col>
+                {{alumno.perdio}}
+            </ion-col>
+            <ion-col>
+                Empate:
+            </ion-col>
+            <ion-col>
+                {{alumno.empate}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="gris">
+            <ion-col size="3">
+                Cel:
+            </ion-col>
+            <ion-col>
+                {{alumno.cel}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="blanco">
+            <ion-col size="3">
+                Apodo:
+            </ion-col>
+            <ion-col>
+                {{alumno.apodo}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="gris">
+            <ion-col>
+                Grado:
+            </ion-col>
+            <ion-col>
+                {{alumno.grado}}
+            </ion-col>
+            <ion-col>
+                Peso:
+            </ion-col>
+            <ion-col>
+                {{alumno.peso}}
+            </ion-col>
+        </ion-row>
+
+
+
+        <ion-row class="blanco">
+            <ion-col size="6">
+                Problemas de Salud:
+            </ion-col>
+            <ion-col>
+                {{alumno.salud}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="gris">
+            <ion-col size="3">
+                Enlace:
+            </ion-col>
+            <ion-col>
+                <!-- <ion-button size="small" href="{{alumno.enlace}}" color="primary">
+             <ion-icon name="logo-facebook"></ion-icon>
+             </ion-button> -->
+                <a class="btn btn-primary text-white" href="{{alumno.enlace}}">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+                <ion-col size="3">
+                    </ion-col>
+                    <ion-col>
+                    </ion-col>
+        </ion-row>
+        <ion-row>
+                <ion-col size="3">
+                    </ion-col>
+                    <ion-col>
+                    </ion-col>
+        </ion-row>
+        <!-- <h2 color="dark"> Datos del Tutor</h2> -->
+        <ion-item color="dark">
+                <ion-label>
+                        Datos del Tutor
+                </ion-label>
+              </ion-item>
+
+
+        <ion-row class="gris">
+            <ion-col size="3">
+                Nombre:
+            </ion-col>
+            <ion-col>
+                {{alumno.tutor}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="blanco">
+            <ion-col size="4">
+                Dirección:
+            </ion-col>
+            <ion-col>
+                {{alumno.direccionTutor}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="gris">
+            <ion-col size="3">
+                Telefono:
+            </ion-col>
+            <ion-col>
+                {{alumno.telefonoTutor}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+                <ion-col size="3">
+                    </ion-col>
+                    <ion-col>
+                    </ion-col>
+        </ion-row>
+        <ion-row>
+                <ion-col size="3">
+                    </ion-col>
+                    <ion-col>
+                    </ion-col>
+        </ion-row>
+                  
+              
+
+
+        <ion-item color="dark">
+                <ion-label>
+                        Datos del Profesor
+                </ion-label>
+              </ion-item>
+
+        <ion-row class="gris">
+            <ion-col size="3">
+                Nombre:
+            </ion-col>
+            <ion-col>
+                {{alumno.nombreProf}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="blanco">
+            <ion-col size="3">
+                Edad:
+            </ion-col>
+            <ion-col>
+                {{alumno.edadProf}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="gris">
+            <ion-col size="3">
+                Sexo:
+            </ion-col>
+            <ion-col>
+                {{alumno.sexoProf}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="blanco">
+            <ion-col size="4">
+                Dirección:
+            </ion-col>
+            <ion-col>
+                {{alumno.direccionProf}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="gris">
+            <ion-col size="3">
+                Telefono:
+            </ion-col>
+            <ion-col>
+                {{alumno.telefonoProf}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="blanco">
+            <ion-col size="4">
+                Especialidad:
+            </ion-col>
+            <ion-col>
+                {{alumno.especialidadProf}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="gris">
+            <ion-col size="4">
+                Grado:
+            </ion-col>
+            <ion-col>
+                {{alumno.gradoProf}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="blanco">
+            <ion-col size="4">
+                Academia:
+            </ion-col>
+            <ion-col>
+                {{alumno.academia}}
+            </ion-col>
+        </ion-row>
+        <ion-row class="gris">
+            <ion-col size="3">
+                Enlace:
+            </ion-col>
+            <ion-col>
+                <!-- <ion-button size="small" href="{{alumno.enlace}}" color="primary">
+                         <ion-icon name="logo-facebook"></ion-icon>
+                         </ion-button> -->
+                <a class="btn btn-primary text-white" href="{{alumno.enlaceProf}}">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </ion-col>
+        </ion-row>
+
+        <ion-row *ngIf="alumno.userUid == iserUid || isAdmin == true; "></ion-row>
+
+    </ion-grid>
+    <ion-row *ngIf="alumno.userUid == userUid || isAdmin == true">
+        <ion-button class="btn-block btn-info" [routerLink]="['/modal-alumno', alumno.id]">
+            <ion-label>Editar</ion-label>
+        </ion-button>
+    </ion-row>
+
+    <ion-row *ngIf="alumno.userUid == userUid || isAdmin == true">
+        <ion-button (click)="onDeleteAlumno(alumno.id)" color="danger">
+            <ion-label>Eliminar</ion-label>
+        </ion-button>
+    </ion-row>
+
+
+</ion-content>
+<!-- <ion-modal [userUid="userUid"]></ion-modal> 
     *ngIf="alumno.userUid == userUid || isAdmin == true"
     -->
-    

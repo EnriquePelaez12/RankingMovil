@@ -11,22 +11,17 @@ import { DataApiService } from '../../servicios/data-api.service';
 export class ListPeleadoresPage implements OnInit {
 
   constructor(private dataApi: DataApiService) { }
- 
-  private alumnos: AlumnoInterface[];
- 
- 
-   ngOnInit() {
-  this.getListAlumnos();
-   }
- 
-   getListAlumnos(){
-     this.dataApi.getAllAlumno().subscribe(alumnos => {
-       console.log('Alumnos', alumnos);
-       this.alumnos = alumnos;
-     });
-   }
- 
 
- 
- }
- 
+   private alumnos: AlumnoInterface[];
+  ngOnInit() {
+    this.getPeleadores();
+    console.log('ES PELEADOR:', this.alumnos)
+   
+  }
+
+  getPeleadores(){
+    this.dataApi.getAllPeleadores().subscribe(peleadores => this.alumnos = peleadores);
+
+
+  }
+}

@@ -35,6 +35,20 @@ export class DataApiService {
     }));
   }
 
+  
+   //metodo de ofertas
+   getAllPeleadores() {
+    this.alumnosCollection = this.afs.collection('alumnos', ref => ref.where('peleador', '==', '1'));
+    return this.alumnos = this.alumnosCollection.snapshotChanges()
+      .pipe(map(changes => {
+        return changes.map(action => {
+          const data = action.payload.doc.data() as AlumnoInterface;
+          data.id = action.payload.doc.id;
+          return data;
+        });
+      }));
+  }
+
   //metodo para cachar el id en firebase
   getOneAlumno(idAlumno: string){
     this.alumnoDoc = this.afs.doc<AlumnoInterface>(`alumnos/${idAlumno}`);//va a la coleccion de libros y busca la ruta que le pasemos

@@ -7,8 +7,48 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let alumno of alumnos">
+       <ion-item lines="insert" button [routerLink]="['/detail', alumno.id]">
+      <ion-thumbnail slot="start">
+        <img  src="{{alumno.photoUrl}}">
+      </ion-thumbnail>
+      <ion-grid>
+        <ion-row>
+            {{alumno.nombreC}}
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              {{alumno.peso}}-kg
+          </ion-col>
+          <ion-col>
+            {{alumno.edad}}-años
+        </ion-col> 
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    </ion-item>
+  </ion-list>
+</ion-content>
 
 
+<!-- <ion-content class="card_book">
+
+  <ion-card class="medida" *ngFor="let alumno of alumnos">
+    <img class="img-fluid" src="{{alumno.photoUrl}}">
+    <ion-card-header>
+      <ion-card-subtitle>Bienvenido</ion-card-subtitle>
+      <ion-card-title>Artes Marciales Mixtas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>El club de pelea te invita a formar parte de su equipo con profesores certificados y calificados, la mejor opcion en Tepeaca para entrenar artes marciales mixtas.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content> -->
+
+  
+<!-- 
 <ion-content class="ion-padding">
     <ion-list>
       <ion-item-sliding *ngFor="let alumno of alumnos">
@@ -21,4 +61,6 @@
     </ion-list>    
     </ion-content>
     
+ -->
+
    
