@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'mma', loadChildren: './componentes/mma/mma.module#MmaPageModule' },
   { path: 'alumno', loadChildren: './componentes/alumno/alumno.module#AlumnoPageModule' },
   { path: 'jiu-jitsu', loadChildren: './componentes/jiu-jitsu/jiu-jitsu.module#JiuJitsuPageModule' },
-  { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
+  { path: 'contacto', loadChildren: './componentes/contacto/contacto.module#ContactoPageModule' },
  
 ];
 

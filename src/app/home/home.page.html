@@ -19,28 +19,29 @@
       <ion-card-content>
         <p>El club de pelea te invita a formar parte de su equipo con profesores certificados y calificados, la mejor opcion en Tepeaca para entrenar artes marciales mixtas.</p>
       </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-        <ion-item  >
+   
+        <ion-item class="title" color="dark" >
             <ion-label><h1>Servicios</h1></ion-label>
           </ion-item>
-        <ion-item  >
+        <ion-item  [routerLink]="['/kick-boking']" >
             <ion-label>Kick Boxing</ion-label>
           </ion-item>
     
-          <ion-item  >
+          <ion-item [routerLink]="['/mma']" >
             <ion-label>MMA</ion-label>
           </ion-item>
     
-          <ion-item >
+          <ion-item  [routerLink]="['/jiu-jitsu']">
             <ion-label>Jiu Jitsu</ion-label>
           </ion-item>
     
     </ion-card>
-
     
-    <ion-card class="welcome-card">
+    <ion-item class="title" color="dark" >
+        <ion-label><h1>instalaiones</h1></ion-label>
+      </ion-item>
+    
+    <ion-card class="welcome-card" color="dark">
         <img src="/assets/jaula.png" alt="" />
         <ion-card-header>
           <ion-card-title>Jaula Profesional</ion-card-title>
@@ -54,4 +55,8 @@
         </ion-card-header>
       </ion-card>
 </ion-content>
+
+
+
+
 
