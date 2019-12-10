@@ -315,17 +315,19 @@
 
     </ion-grid>
     <ion-row *ngIf="alumno.userUid == userUid || isAdmin == true">
-        <ion-button class="btn-block btn-info" [routerLink]="['/modal-alumno', alumno.id]">
-            <ion-label>Editar</ion-label>
+        <ion-button [routerLink]="['/modal-alumno', alumno.id]" expand="round" fill="outline" color="dark">
+            Editar Dato<ion-icon name="create"></ion-icon>
         </ion-button>
     </ion-row>
 
-    <ion-row *ngIf="alumno.userUid == userUid || isAdmin == true">
-        <ion-button (click)="onDeleteAlumno(alumno.id)" color="danger">
-            <ion-label>Eliminar</ion-label>
-        </ion-button>
-    </ion-row>
-
+ <div class="centrado">
+        <ion-row *ngIf="alumno.userUid == userUid || isAdmin == true">
+                <ion-button (click)="onDeleteAlumno(alumno.id)" expand="round" fill="outline" color="danger">
+                        Eliminar Dato <ion-icon name="trash"></ion-icon>
+                </ion-button>
+            </ion-row>
+        
+ </div>
 
 </ion-content>
 <!-- <ion-modal [userUid="userUid"]></ion-modal> 
