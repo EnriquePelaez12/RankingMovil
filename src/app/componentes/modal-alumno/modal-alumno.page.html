@@ -12,113 +12,159 @@
 
       <ion-label>Matricula:</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Matricula" [(ngModel)]="alumno.matricula"></ion-input>
+        <ion-input type="text" placeholder="Matricula" [(ngModel)]="alumno.matricula" required
+        minlength="8" maxlength="10"></ion-input>
       </ion-item>
   
       <ion-label>Nombre:</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Nombre" [(ngModel)]="alumno.nombreC"></ion-input>
+        <ion-input  type="text" placeholder="Nombre" [(ngModel)]="alumno.nombreC"  required
+        minlength="8"
+         maxlength="38">
+        </ion-input>
       </ion-item>
 
       <ion-label>Edad:</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Edad" [(ngModel)]="alumno.edad"></ion-input>
+        <ion-input type="text" placeholder="Edad" [(ngModel)]="alumno.edad" required
+        minlength="1" maxlength="2"></ion-input>
       </ion-item>
 
       
       <ion-label>Peleador:</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Peleador" [(ngModel)]="alumno.peleador"></ion-input>
+        <ion-input 
+        required 
+        type="text" 
+        placeholder="Peleador" 
+        [(ngModel)]="alumno.peleador"
+        minlength="1" 
+        maxlength="2">
+      </ion-input>
       </ion-item>
 
 
       <ion-label>Dirección</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Dirección" [(ngModel)]="alumno.direccion"></ion-input>
+        <ion-input required type="text" placeholder="Dirección" [(ngModel)]="alumno.direccion"
+        minlength="10" 
+        maxlength="30"></ion-input>
       </ion-item>
 
       <ion-label>Sexo</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Sexo" [(ngModel)]="alumno.sexo"></ion-input>
+        <ion-input required type="text" placeholder="Sexo" [(ngModel)]="alumno.sexo"
+        minlength="8" 
+        maxlength="12"></ion-input>
       </ion-item>
 
       
       <ion-label>Cel</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="" [(ngModel)]="alumno.cel"></ion-input>
+        <ion-input required type="text" placeholder="" [(ngModel)]="alumno.cel"
+        minlength="9" 
+        maxlength="10"></ion-input>
       </ion-item>
 
       <ion-label>Apodo</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Apodo" [(ngModel)]="alumno.apodo"></ion-input>
+        <ion-input required type="text" placeholder="Apodo" [(ngModel)]="alumno.apodo"
+        minlength="4" 
+        maxlength="20"></ion-input>
       </ion-item>
 
       <ion-label>Grado</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Grado" [(ngModel)]="alumno.grado"></ion-input>
+        <ion-input required type="text" placeholder="Grado" [(ngModel)]="alumno.grado"
+        minlength="4" 
+        maxlength="18"></ion-input>
       </ion-item>
 
       <ion-label>Peso</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Peso" [(ngModel)]="alumno.peso"></ion-input>
+        <ion-input required type="text" placeholder="Peso" [(ngModel)]="alumno.peso"
+        minlength=2 
+        maxlength="5"></ion-input>
       </ion-item>
      
       <ion-label>Problemas de Salud</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Problemas de Salud" [(ngModel)]="alumno.salud"></ion-input>
+        <ion-input required type="text" placeholder="Problemas de Salud" [(ngModel)]="alumno.salud"
+        minlength="4" 
+        maxlength="30"></ion-input>
       </ion-item>
 
       <ion-label>Victorias</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Victorias" [(ngModel)]="alumno.gano"></ion-input>
+        <ion-input required type="text" placeholder="Victorias" [(ngModel)]="alumno.gano"
+        minlength="1" 
+        maxlength="3"></ion-input>
       </ion-item>
 
       <ion-label>Derotas</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Derotas" [(ngModel)]="alumno.perdio"></ion-input>
+        <ion-input required type="text" placeholder="Derotas" [(ngModel)]="alumno.perdio"
+        minlength="1" 
+        maxlength="3"></ion-input>
       </ion-item>
 
       <ion-label>Empate</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Empate" [(ngModel)]="alumno.empate"></ion-input>
+        <ion-input required type="text" placeholder="Empate" [(ngModel)]="alumno.empate"
+        minlength="1" 
+        maxlength="2"></ion-input>
       </ion-item>
 
       <h1>Datos del Tutor</h1>
 
       <ion-label>Nombre</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Nombre" [(ngModel)]="alumno.tutor"></ion-input>
+        <ion-input required type="text" placeholder="Nombre" [(ngModel)]="alumno.tutor"
+        minlength="8"
+        maxlength="38"></ion-input>
       </ion-item>
 
       <ion-label>Dirección</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Dirección" [(ngModel)]="alumno.direccionTutor"></ion-input>
+        <ion-input required type="text" placeholder="Dirección" [(ngModel)]="alumno.direccionTutor"
+        minlength="8"
+        maxlength="40"></ion-input>
       </ion-item>
 
       <ion-label>Telefono</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Telefono" [(ngModel)]="alumno.telefonoTutor"></ion-input>
+        <ion-input required type="text" placeholder="Telefono" [(ngModel)]="alumno.telefonoTutor"
+        minlength="10"
+        maxlength="10"></ion-input>
       </ion-item>
       <h1>Datos del Profesor</h1>
 
       <ion-label>Nombre</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Nombre" [(ngModel)]="alumno.nombreProf"></ion-input>
+        <ion-input required type="text" placeholder="Nombre" [(ngModel)]="alumno.nombreProf"
+        minlength="8"
+        maxlength="38"></ion-input>
       </ion-item>
 
       <ion-label>Edad</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Edad" [(ngModel)]="alumno.edadProf"></ion-input>
+        <ion-input required type="text" placeholder="Edad" [(ngModel)]="alumno.edadProf"
+        minlength="1"
+        maxlength="2"></ion-input>
       </ion-item>
 
       <ion-label>Sexo</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Sexo" [(ngModel)]="alumno.sexoProf"></ion-input>
+        <ion-input required type="text" placeholder="Sexo" [(ngModel)]="alumno.sexoProf"
+        minlength="8" 
+        maxlength="12"></ion-input>
       </ion-item>
 
       <ion-label>Direccion</ion-label>
       <ion-item *ngIf="alumno">
-        <ion-input required type="text" placeholder="Direccion" [(ngModel)]="alumno.direccionProf"></ion-input>
+        <ion-input required type="text" placeholder="Direccion" [(ngModel)]="alumno.direccionProf"
+        minlength="8" 
+        maxlength="40"></ion-input>
       </ion-item>
 
 

@@ -320,9 +320,9 @@
         </ion-button>
     </ion-row>
 
- <div class="centrado">
+ <div class="center">
         <ion-row *ngIf="alumno.userUid == userUid || isAdmin == true">
-                <ion-button (click)="onDeleteAlumno(alumno.id)" expand="round" fill="outline" color="danger">
+                <ion-button  (click)="onDeleteAlumno(alumno.id)" expand="round" fill="outline" color="danger">
                         Eliminar Dato <ion-icon name="trash"></ion-icon>
                 </ion-button>
             </ion-row>

@@ -14,11 +14,11 @@
     <br>
   <ion-item color="light">
     <ion-label position="floating" > Correo electrónico</ion-label>
-    <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
+    <ion-input type="text" [(ngModel)]="email" name="email"  minlength="4"  maxlength="40"></ion-input>
   </ion-item>
   <ion-item color="light">
     <ion-label  position="floating" > Contraseña</ion-label>
-    <ion-input [(ngModel)]="password" type="password" name="password"></ion-input>
+    <ion-input [(ngModel)]="password" type="password" name="password" minlength="4"  maxlength="20"></ion-input>
   </ion-item>
   <br>
   <ion-button (click)="onLogin()" color="danger" expand="block">Entrar</ion-button>
